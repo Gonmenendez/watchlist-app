@@ -13,7 +13,7 @@ import PropTypes from "prop-types"
 import styles from "./style.module.css"
 
 // Component
-import MovieDetail from "../movieDetail/movieDetail"
+import MovieDetail from "../movieDetail/MovieDetail"
 
 const FoundMovies = ({ allMovies }) => {
     const { handleClick } = useMovie()
