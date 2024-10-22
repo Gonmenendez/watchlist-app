@@ -7,7 +7,7 @@ import { useWatchlist } from "../../hooks/useWatchlist"
 import { useMovie } from '../../hooks/useMovie'
 
 // Components
-import MovieDetail from '../movieDetail/movieDetail'
+import MovieDetail from '../movieDetail/MovieDetail'
 
 // Styles
 import styles from './style.module.css'
