@@ -1,0 +1,75 @@
+/* Color import */
+@import url(../../utils/colors.css);
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.motto{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.motto img{
+    width: 85%;
+}
+
+.movieSearch{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.movieSearch h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-shadow: 3px 3px 3px var(--black);
+}
+
+.searchContainer{
+    display: flex;
+    gap: 1rem;
+}
+
+.searchContainer input{
+    color: var(--white);
+    background-color: var(--input-bg);
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--border);
+}
+
+.searchContainer input::placeholder{
+    color: var(--white);
+    font-size: 0.65rem;
+}
+
+.searchContainer button{
+    color: var(--white);
+    background-color: var(--button);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.4rem;
+}
+
+.searchContainer button:hover{
+    color: var(--button);
+    background: white;
+}
+
+@media (min-width: 780px) {
+    .searchContainer{
+        width: 100%;
+    }
+
+    .searchContainer input{
+        width: 100%;
+    };
+}

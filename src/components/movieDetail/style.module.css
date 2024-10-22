@@ -1,0 +1,158 @@
+@import url(../../utils/colors.css);
+
+.movieContainer{
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.movieContainer::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    opacity: 0.85;
+    z-index: -10;
+}
+
+.movie{
+    width: 85%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.movieMotto{
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.closeTagContainer{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+.closeTagContainer:active{
+    background-color: red;
+}
+
+.closeTag{
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.movieMotto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    object-fit: cover;
+}
+
+.movieMotto::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0)70%, rgba(0, 0, 0, 1)100%); 
+    z-index: 1;
+}
+
+.movieMotto h2{
+    position: absolute;
+    color: var(--white);
+    background: transparent;
+    font-weight: 400;
+    bottom: 0.5rem;
+    left: 0.8rem;
+    z-index: 2;
+}
+
+.movieData{
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem;
+}
+
+.movieDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.movieDetails p{
+    color: var(--white);
+    padding: 0.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.movieDetails button{
+    width: 50%;
+    color: var(--white);
+    background-color: var(--input-bg);
+    border: 2px solid var(--white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.movieDetails button:active{
+    background-color: var(--button);
+}
+
+.movieSpecifics{
+    color: white;
+    font-weight: 100;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+    .movie{
+        width: 80%;
+    }
+
+    .movieData{
+        padding: 2rem;
+    }
+
+    .movieDetails p{
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        padding: 0.5rem;
+    }
+
+    .movieSpecifics p{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .movie{
+        width: 70%;
+    }
+}

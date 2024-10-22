@@ -1,0 +1,47 @@
+@import url(../../utils/colors.css);
+
+.moviesSection{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px var(--black);
+    margin-top: 3rem;
+}
+
+.movies{
+    list-style: none;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0rem 1.7rem;
+}
+
+.movieContainer{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieContainer h3{
+    height: 2.6rem;
+    text-align: center;
+    font-weight: 500;
+    margin: 1.5rem 0 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movieContainer p{
+    font-weight: lighter;
+    margin-bottom: 0.5rem;
+}
+
+.movieContainer img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+}

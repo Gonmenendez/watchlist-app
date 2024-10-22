@@ -1,0 +1,9 @@
+:root{
+    --white: rgba(255,255,255,255);
+    --black: rgba(0, 0, 0, 255);
+    --bg: rgba(22,55,80,255);
+    --darker-bg: rgba(30,41,60,255);
+    --input-bg: rgba(35,45,66,255);
+    --border: rgba(19,177,185,255);
+    --button: rgba(34,30,50,255);
+}
