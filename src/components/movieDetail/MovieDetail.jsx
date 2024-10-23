@@ -13,10 +13,12 @@ import styles from './style.module.css'
 // Bootstrap icons
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useWatchlist } from '../../hooks/useWatchlist';
+import { useOutClickClose } from '../../hooks/useOutClickClose';
 
 const MovieDetail = () => {
     const { loading, displayMovie, setDisplayMovie, shownMovie, setShownMovie, error, getMovie } = useMovie()
     const { cart, addToCart, removeFromCart } = useWatchlist()
+    const { menuRef } = useOutClickClose(() => setDisplayMovie())
     
     const checkMovieInWatchlist = movie => {
         return cart.some(item => item.id === movie.id)
@@ -35,13 +37,13 @@ const MovieDetail = () => {
     }
 
     return (
-        <section>
+        <>
             {loading ?
             <p>Loading...</p>
             :
             shownMovie ?
                 <div className={styles.movieContainer}>
-                    <div className={styles.movie}>
+                    <div className={styles.movie} ref={menuRef}>
                         <div className={styles.movieMotto}>
                             <button className={styles.closeTagContainer} onClick={closeMovie}>
                                 <i className={`${styles.closeTag} bi bi-x`}/>
@@ -68,7 +70,7 @@ const MovieDetail = () => {
                 </div>
                 :
                 error && (<p>{error}</p>)} 
-        </section>
+        </>
     )
 }
 

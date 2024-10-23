@@ -39,8 +39,6 @@ function useElementWidth(){
         };
     
         updateWidth();
-
-        // console.log(elementRef.current.getBoundingClientRect())
     
         window.addEventListener('resize', updateWidth);
     
@@ -86,6 +84,20 @@ export function useSlider(){
             moveIndex < 0 ? setLeftArrow(true) : setLeftArrow(false)
         }
         arrowsShown()
+
+        if(elementWidth == 0 || elementWidth === windowWidth){
+            setMoveIndex(() => {
+                const newMoveIndex = 0
+                setTranslateX(`translateX(${newMoveIndex}px)`)
+                return newMoveIndex
+            })
+        } else if((elementWidth - windowWidth)* -1 > moveIndex){
+            setMoveIndex(() => {
+                const newMoveIndex = (elementWidth - windowWidth) * - 1
+                setTranslateX(`translateX(${newMoveIndex}px)`)
+                return newMoveIndex
+            })
+        }
     },[cart, elementWidth, translateX])
 
     const canMove = (direction) => {

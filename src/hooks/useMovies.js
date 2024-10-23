@@ -7,6 +7,7 @@ import { movies } from "../services/movies"
 // Hooks
 import { useSearch } from "./useSearch"
 
+// Context
 import { MoviesHandler } from "../context/MoviesHandler"
 
 export function useMovies ({search}) {

@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .movieContainer::before{
@@ -19,7 +19,7 @@
     height: 100vh;
     background-color: var(--black);
     opacity: 0.85;
-    z-index: -10;
+    z-index: -1;
 }
 
 .movie{
@@ -153,6 +153,45 @@
 
 @media (min-width: 1024px) {
     .movie{
-        width: 70%;
+        width: 50%;
+    }
+
+    .movieMotto img{
+        max-height: 50vh;
+    }
+    
+
+    .movieData{
+        padding: 0.8rem;
+    }
+
+    .movieDetails p{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .movieDetails button{
+        width: 30%;
+        padding: 0.7rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .movieData{
+        padding: 1rem;
+    }
+
+    .movieMotto img{
+        max-height: none;
+    }
+
+    .movieDetails p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .movieDetails button{
+        width: 50%;
+        padding: 1rem;
     }
 }

@@ -12,6 +12,9 @@ import PropTypes from "prop-types"
 // Styles
 import styles from "./style.module.css"
 
+// Assets
+import notFoundImg from '../../assets/notFound.png'
+
 // Component
 import MovieDetail from "../movieDetail/MovieDetail"
 
@@ -38,7 +41,13 @@ FoundMovies.propTypes = {
 
 const NoMoviesFound = () => {
     return(
-        <p>No movies found</p>
+        <>
+        <h2 className={styles.moviesSection}>Movies</h2>
+        <div className={styles.notFound}>
+            <img src={notFoundImg} alt="No movies found..." />
+            <p>No movies found</p>
+        </div>
+        </>
     )
 }
 
@@ -56,7 +65,7 @@ const Movies = () => {
 
     return(
         loading ?
-        <p>Loading...</p>
+        <p className={styles.loadingMovies}>Loading...</p>
         : hasMovies ?
             (
             <>
